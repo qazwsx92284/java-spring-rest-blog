@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
 
 @Component
 public class DatabaseLoader implements ApplicationRunner {
-    @Autowired
+
     private final PostRepository postRepository;
 
     private final String[] templates = {
@@ -23,7 +23,7 @@ public class DatabaseLoader implements ApplicationRunner {
     public List<Post> randomPosts = new ArrayList<>();
     public List<Author> authors = new ArrayList<>();
 
-
+    @Autowired
     public DatabaseLoader(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
